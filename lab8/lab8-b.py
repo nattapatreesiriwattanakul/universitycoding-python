@@ -1,0 +1,16 @@
+# 6610742246 Nattapat Reesiriwattanakul
+# lab8 Question B
+# cmd pandas และศึกษษตามโจทย์ที่กำหนด
+
+import numpy as np
+import pandas as pd
+
+mydictionary = {'names': ['Somu', 'Kiku', 'Amol', 'Lini'],
+                'physics': [68, 74, 77, 78],
+                'chemistry': [84, 56, 73, 69],
+                'algebra': [78, 88, 82, 87]}
+
+# create dataframe using dictionary
+df_marks = pd.DataFrame(mydictionary)
+
+print(df_marks)

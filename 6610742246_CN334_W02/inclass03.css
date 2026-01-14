@@ -1,0 +1,57 @@
+/* ไฟล์3.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    background-color: rgb(240, 163, 214);
+}
+
+.header {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    font-size: 2em;
+    background-color: rgb(188, 0, 6);
+}
+
+form {
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: rgb(188, 0, 6);
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row; /* เปลี่ยนเป็นแนวนอนเมื่อหน้าจอใหญ่ขึ้น */
+        justify-content: center;
+    }
+    .header {
+        font-size: 3em; /* ขนาดตัวอักษรใหญ่ขึ้นในหน้าจอใหญ่ */
+    }
+}

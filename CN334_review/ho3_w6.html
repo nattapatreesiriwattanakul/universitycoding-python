@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CN334 HTML GET Form with JS</h1>
+        <form>
+            Email:<input type="text" id="email" placeholder="your-email@tu.ac.th"><br><br>
+            Message:<textarea id="message" placeholder="Your message..."></textarea><br>
+            <button type="button" onclick="sendMessage()">Send Message</button>
+        </form>
+    </center>
+    <script type="text/javascript">
+        function sendMessage() {
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var url = `https://httpbin.org/get?email=${email}&message=${message}`;
+            location.href = url;
+        }
+    </script>
+</body>
+</html>

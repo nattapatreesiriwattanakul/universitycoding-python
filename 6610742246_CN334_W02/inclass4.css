@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa; /* สีพื้นหลังของหน้า */
+    font-family: 'Arial', sans-serif; /* ฟอนต์ที่ใช้ */
+    margin: 0; /* ลบ margin เริ่มต้น */
+}
+
+.header {
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    color: #ffffff; /* สีข้อความ */
+    padding: 20px; /* ระยะห่างภายใน */
+    width: 100%; /* ให้เต็มความกว้าง */
+    font-size: 2.5em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    background-color: rgb(188, 0, 6); /* สีพื้นหลังของหัวข้อ */
+}
+
+.container {
+    margin: 20px auto; /* ระยะห่างด้านบนและล่าง */
+    background-color: #ffffff; /* สีพื้นหลังของกล่อง */
+    border-radius: 10px; /* มุมโค้งของกล่อง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาให้กับกล่อง */
+    padding: 20px; /* ระยะห่างภายใน */
+    max-width: 800px; /* ความกว้างสูงสุด */
+}
+
+.review-form {
+    display: flex; /* ใช้ Flexbox */
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+}
+
+.review-form input, .review-form textarea {
+    margin: 10px 0; /* ระยะห่างด้านบนและล่าง */
+    padding: 10px; /* ระยะห่างภายใน */
+    border: 1px solid #ccc; /* ขอบของฟิลด์ */
+    border-radius: 5px; /* มุมโค้งของฟิลด์ */
+}
+
+.review-form button {
+    background-color: rgb(188, 0, 6); /* สีพื้นหลังของปุ่ม */
+    color: #ffffff; /* สีข้อความในปุ่ม */
+    border: none; /* ลบขอบของปุ่ม */
+    padding: 10px; /* ระยะห่างภายในปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ที่ปุ่ม */
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+}
+
+.review-form button:hover {
+    background-color: rgb(255, 0, 0); /* เปลี่ยนสีเมื่อชี้เมาส์ */
+}
+
+.reviews {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.review {
+    border-bottom: 1px solid #ccc; /* ขอบด้านล่างของรีวิว */
+    padding: 10px 0; /* ระยะห่างด้านบนและล่าง */
+}
+
+.review:last-child {
+    border-bottom: none; /* ลบขอบด้านล่างของรีวิวสุดท้าย */
+}
+
+.rating {
+    color: gold; /* สีของคะแนน */
+}
+
+/* Media Queries สำหรับ Responsive Design */
+@media (max-width: 768px) {
+    .review-form {
+        flex-direction: column; /* จัดเรียงในแนวตั้งสำหรับหน้าจอเล็ก */
+    }
+    .review-form input, .review-form textarea {
+        width: 100%; /* ให้เต็มความกว้าง */
+    }
+}
+
+@media (min-width: 769px) {
+    .review-form {
+        flex-direction: row; /* จัดเรียงในแนวนอนสำหรับหน้าจอใหญ่ */
+        justify-content: space-between; /* จัดให้มีระยะห่างระหว่างฟิลด์ */
+    }
+    .review-form input, .review-form textarea {
+        width: 48%; /* ให้มีความกว้าง 48% */
+    }
+}

@@ -1,0 +1,66 @@
+body {
+    display: flex; /* ใช้ Flexbox ใน body */
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดแนวกลางในแนวนอน */
+    justify-content: flex-start; /* จัดแนวกลางในแนวนอน */
+    height: 100vh; /* ความสูงของ viewport */
+    margin: 0; /* ลบ margin เริ่มต้น */
+    background-color: #f8f9fa; /* สีพื้นหลังที่อ่อน */
+    font-family: 'Arial', sans-serif; /* ฟอนต์ที่ใช้ */
+}
+.header {
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    color: #ffffff; /* สีข้อความ */
+    padding: 20px; /* เพิ่มระยะห่างภายใน */
+    width: 100%; /* ให้เต็มความกว้าง */
+    font-size: 2.5em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    background-color: rgb(188, 0, 6); /* สีพื้นหลังของหัวข้อ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาให้กับหัวข้อ */
+}
+.media-container {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงให้เป็นบรรทัดเดียว */
+    align-items: center; /* จัดแนวกลางในแนวตั้ง */
+    justify-content: center; /* จัดแนวกลางในแนวนอน */
+    width: 100%; /* ให้เต็มความกว้าง */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+}
+img {
+    width: 100%; /* ขยายรูปภาพให้เต็มความกว้าง */
+    max-width: 600px; /* กำหนดความกว้างสูงสุด */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+    border-radius: 10px; /* มุมโค้งของรูปภาพ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาให้กับรูปภาพ */
+}
+p {
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    color: #333; /* สีข้อความ */
+    font-size: 1.2em; /* ขนาดตัวอักษร */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    padding: 0 20px; /* เพิ่มระยะห่างด้านข้าง */
+}
+a {
+    color: #ffffff; /* สีของลิงก์ */
+    font-size: 1.2em; /* ขนาดตัวอักษรของลิงก์ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    padding: 10px 20px; /* เพิ่มระยะห่างภายใน */
+    background-color: rgb(188, 0, 6); /* สีพื้นหลังของลิงก์ */
+    border-radius: 5px; /* มุมโค้งของลิงก์ */
+    transition: background-color 0.3s; /* เอฟเฟกต์การเปลี่ยนสี */
+}
+a:hover {
+    background-color: rgb(255, 0, 0); /* เปลี่ยนสีเมื่อชี้เมาส์ */
+}
+/* Media Queries */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row; /* เปลี่ยนเป็นแนวนอนเมื่อหน้าจอใหญ่ขึ้น */
+        justify-content: center;
+    }
+    .header {
+        font-size: 3em; /* ขนาดตัวอักษรใหญ่ขึ้นในหน้าจอใหญ่ */
+    }
+    p {
+        font-size: 1.5em; /* ขนาดตัวอักษรใหญ่ขึ้นในหน้าจอใหญ่ */
+    }
+}

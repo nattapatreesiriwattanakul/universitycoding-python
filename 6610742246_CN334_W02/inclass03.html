@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>TEASER FOOTBALL SHOP - Checkout</title>
+    <link rel="stylesheet" href="inclass03.css">
+    <style>
+        body {
+            display: flex; /* ใช้ Flexbox ใน body */
+            flex-direction: column; /* จัดเรียงในแนวตั้ง */
+            align-items: center; /* จัดแนวกลางในแนวนอน */
+            justify-content: flex-start; /* จัดแนวกลางในแนวนอน */
+            margin: 0; /* ลบ margin เริ่มต้น */
+            background-color: rgb(240, 163, 214); /* เพิ่มสีพื้นหลังให้กับ body */
+        }
+        .header {
+            text-align: center; /* จัดข้อความให้อยู่กลาง */
+            color: #ffffff; /* สีข้อความ */
+            padding: 20px; /* เพิ่มระยะห่างภายใน */
+            width: 100%; /* ให้เต็มความกว้าง */
+            font-size: 2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+            background-color: rgb(188, 0, 6); /* สีพื้นหลังของหัวข้อ */
+        }
+        form {
+            width: 80%; /* กำหนดความกว้างของฟอร์ม */
+            margin: 20px 0; /* ระยะห่างด้านบนและล่าง */
+            padding: 20px; /* ระยะห่างภายใน */
+            border: 1px solid #ccc; /* ขอบของฟอร์ม */
+            background-color: #ffffff; /* สีพื้นหลังของฟอร์ม */
+        }
+        label {
+            display: block; /* ทำให้ label เป็นบล็อก */
+            margin-top: 10px; /* ระยะห่างด้านบน */
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%; /* ขยายให้เต็มความกว้าง */
+            padding: 10px; /* ระยะห่างภายใน */
+            margin-top: 5px; /* ระยะห่างด้านบน */
+        }
+        input[type="submit"] {
+            background-color: rgb(188, 0, 6); /* สีพื้นหลังของปุ่ม */
+            color: #ffffff; /* สีข้อความในปุ่ม */
+            border: none; /* ลบขอบของปุ่ม */
+            padding: 10px 15px; /* ระยะห่างภายในปุ่ม */
+            cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ที่ปุ่ม */
+            margin-top: 10px; /* ระยะห่างด้านบน */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>TEASER FOOTBALL SHOP - PAY FORM</h2>
+    </div>
+    <form action="submit_order.php" method="post">
+        <label for="fullname">ชื่อ-นามสกุล:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="address">ที่อยู่:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">เบอร์โทรติดต่อ:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="shipping">รูปแบบการจัดส่ง:</label>
+        <select id="shipping" name="shipping">
+            <option value="pickup">รับเองที่ร้าน</option>
+            <option value="delivery">จัดส่ง</option>
+        </select>
+
+        <label>
+            <input type="checkbox" name="terms" required> ยอมรับข้อตกลงให้บริการ
+        </label>
+
+        <input type="submit" value="ยืนยันการสั่งซื้อ">
+    </form>
+</body>
+</html>

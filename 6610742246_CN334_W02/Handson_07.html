@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hands-On 07</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>HTML Forms</h1>
+    <form action="action_page.php" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br>
+        
+        <!-- Checkbox for "I like CN334" -->
+        <input type="checkbox" id="likeCN334" name="likeCN334">
+        <label for="likeCN334">I like CN334</label><br>
+
+        <!-- Checkbox for "CN334 Is Fun" -->
+        <input type="checkbox" id="cn334Fun" name="cn334Fun">
+        <label for="cn334Fun">CN334 Is Fun</label><br>
+
+        <label for="expectedGrade">Your expected grade of CN334:</label><br>
+        <!-- Radio buttons for expected grade -->
+        <input type="radio" id="gradeD" name="expectedGrade" value="D">
+        <label for="gradeD">D</label><br>
+        
+        <input type="radio" id="gradeC" name="expectedGrade" value="C">
+        <label for="gradeC">C</label><br>
+        
+        <input type="radio" id="gradeB" name="expectedGrade" value="B">
+        <label for="gradeB">B</label><br>
+
+        <input type="radio" id="gradeA" name="expectedGrade" value="A">
+        <label for="gradeA">A</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

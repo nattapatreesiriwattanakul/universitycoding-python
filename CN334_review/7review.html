@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนชมรม</title>
+    <link rel="stylesheet" href="7review.css">
+</head>
+<body>
+    <div class="container">
+        <h2>แบบฟอร์มลงทะเบียนกิจกรรมชมรม</h2>
+        <form id="registerForm" action="/submit-form" method="POST">
+            <label>ชื่อ-นามสกุล: </label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label>อีเมล: </label>
+            <input type="email" id="email" name="email" required>
+
+            <label>เบอร์โทรศัพท์: </label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            
+            <label>วันเดือนปีเกิด: </label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label>ชมรมที่ต้องการเข้าร่วม: </label>
+            <select id="club" name="club" required>
+                <option value="">--กรุณาเลือก--</option>
+                <option value="sports">กีฬา</option>
+                <option value="music">ดนตรี</option>
+                <option value="academic">วิชาการ</option>
+                <option value="art">ศิลปะ</option>
+            </select>
+
+            <label>ข้าพเจ้าตกลงยอมรับเงื่อนไข: </label>
+            <input type="checkbox" id="terms" required>
+
+            <button type="submit">ลงทะเบียน</button>
+        </form>
+    </div>
+    <script src="7review.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">nk
+</head>
+<body>
+    <div class="container">
+        <h2>แบบฟอร์มลงทะเบียนกิจกรรมชมรม</h2>
+        <form id="registerForm" action="/submit-form"method="POST">
+            <label>ชื่อ-นามสกุล:</label>
+            <input type="text"id="fullname"name="fullname" required>
+            
+            <label>อีเมลล์: </label>
+            <input type="email"id="email"name="email" required>
+            
+            <label>ชมรมที่ต้องการเข้า:</label>
+            <select id="club" name="club" required>
+                <option value="">--กรุณาเลือก--</option>
+                <opion value="sports">กีฬา</opion>
+
+                <label>ยอมรับเงื่อนไข</label>
+                <input type="checkbox" id="terms" required>
+
+                <button type="submit">ลงทะเบียน</button></br>
+    
+
+            </select>
+        </form>
+    </div>
+    <script src="7"></script>
+</body>
+</html>

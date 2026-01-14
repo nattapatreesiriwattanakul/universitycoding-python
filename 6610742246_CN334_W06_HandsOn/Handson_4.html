@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CN334 W06 HTML POST Form with JS</h1>
+        <form onsubmit="sendMessage(event)">
+            Email: <input type="text" name="email" placeholder="your-email@tu.ac.th"><br>
+            Message: <textarea name="message" placeholder="Your message..."></textarea><br>
+            <input type="send">
+        </form>
+    </center>
+    <script type="text/javascript">
+        function sendMessage(event){
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        var url = "https://httpbin.org/post";
+        fetch(url, { method: "POST", body: formData})
+        .then(res=>{ alert(JSON.stringify(res["form"]));});
+    }
+    </script>
+</body>
+</html>
